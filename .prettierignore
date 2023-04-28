@@ -1,0 +1,10 @@
+.husky
+.next
+.vscode
+build
+dist
+node_modules
+public
+.eslintrc.json
+.lintstagedrc.js
+next.config.js
