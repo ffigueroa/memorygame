@@ -1,42 +1,82 @@
-Modyo
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+# Memory Game
+
+Memory Game is a memorization game created for a challenge. This project is built with Next.js 13, uses hooks and context to persist state, and is set up with ESLint (Airbnb style), lint-staged, Prettier, and Husky.
 
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)        ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://eclectic-kelpie-73a18e.netlify.app) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Node.js Version](https://img.shields.io/badge/node-%3E%3D12.0.0-brightgreen)](https://nodejs.org/en/download/) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-## Getting Started
+## Features
 
-First, run the development server:
+- Developed with Next.js 13
+- Uses hooks and context to persist state
+- Configured with ESLint (Airbnb style), lint-staged, Prettier, and Husky
+- Docker and Docker Compose support
+- Conventional Commits and Commitizen usage
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Live Demo
+
+You can find a live version of the project at this link: [https://eclectic-kelpie-73a18e.netlify.app](https://eclectic-kelpie-73a18e.netlify.app).
+
+
+## Installation
+
+Clone the repository:
+```sh
+git clone https://github.com/ffigueroa/memorygame.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install the dependencies:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+With npm:
+```sh
+cd memorygame
+npm install
+```
+With yarn:
+```sh
+cd memorygame
+yarn install
+```
+Run the project in development mode:
+```sh
+npm run dev
+```
+or
+```sh
+yarn dev
+```
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Docker
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To run the project with Docker, make sure you have Docker and Docker Compose installed, and follow these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```sh
+cd memorygame
+docker-compose up
+```
+To stop and remove the container:
+```sh
+docker-compose down
+```
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Conventional Commits and Commitizen
 
-To learn more about Next.js, take a look at the following resources:
+This project follows the [Conventional Commits](https://www.conventionalcommits.org/) specifications to facilitate changelog generation and improve commit message readability. In addition, [Commitizen](http://commitizen.github.io/cz-cli/) is used to help contributors follow these conventions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To make a commit with Commitizen, run the following command instead of `git commit`:
+```sh
+npm run commit
+```
+or
+```sh
+yarn commit
+```
+Commitizen will guide you to create a commit message following the Conventional Commits specifications.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Netlify
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for more details.

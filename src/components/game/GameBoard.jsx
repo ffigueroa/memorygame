@@ -1,8 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import { VscDebugRestart } from 'react-icons/vsc';
+import { MdExitToApp } from 'react-icons/md';
+import { useRouter } from 'next/router';
 import Card from './Card';
 
 export default function GameBoard({ player, imagesData }) {
+  const router = useRouter();
+
   const [cards, setCards] = useState([]);
   const [selectedCards, setSelectedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
@@ -71,6 +75,10 @@ export default function GameBoard({ player, imagesData }) {
     createCards();
   };
 
+  const exitGame = () => {
+    router.push('/');
+  };
+
   const handleGameCompletion = () => {
     setShowModal(true);
   };
@@ -83,7 +91,7 @@ export default function GameBoard({ player, imagesData }) {
 
   const modal = (
     <div
-      className={`fixed z-10 inset-0 overflow-y-auto ${showModal ? 'block' : 'hidden'}`}
+      className={`fixed z-20 inset-0 overflow-y-auto ${showModal ? 'block' : 'hidden'}`}
       aria-labelledby="modal-title"
       role="dialog"
       aria-modal="true">
@@ -97,34 +105,32 @@ export default function GameBoard({ player, imagesData }) {
         </span>
         <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
           <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-            <div className="sm:flex sm:items-start">
-              <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                <h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-title">
-                  ¡Felicidades! 🎉
-                </h3>
-                <div className="mt-2">
-                  <p className="text-sm text-gray-500">
-                    Completaste el juego con {matchedCards.length / 2} aciertos y {errors} errores.
-                  </p>
-                </div>
+            <div className="mt-3 text-center sm:mt-0">
+              <h3 className="text-xl leading-6 font-bold text-gray-900" id="modal-title">
+                ¡Felicidades! 🎉
+              </h3>
+              <div className="mt-2">
+                <p className="text-sm text-gray-500">
+                  Completaste el juego con {matchedCards.length / 2} aciertos y {errors} errores.
+                </p>
               </div>
             </div>
           </div>
-          <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+          <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse gap-2 justify-center">
             <button
               type="button"
-              className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-modyo text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+              className="border border-green-500 text-modyo font-bold py-2 px-2 rounded flex flex-row items-center gap-2"
               onClick={() => setShowModal(false)}>
               Aceptar
             </button>
             <button
-              className="border border-green-500 text-modyo font-bold py-2 px-2 rounded flex flex-row items-center gap-2"
+              className="bg-modyo border-green-500 text-white font-bold py-2 px-2 rounded flex flex-row items-center gap-2"
               onClick={() => {
                 resetGame();
                 setShowModal(false);
               }}
               type="button">
-              <VscDebugRestart /> Jugar Otra Vez
+              <VscDebugRestart /> Volver a jugar
             </button>
           </div>
         </div>
@@ -147,12 +153,18 @@ export default function GameBoard({ player, imagesData }) {
           </div>
         </div>
 
-        <div className="text-center">
+        <div className="flex flex-row gap-2">
           <button
             className="border border-green-500 text-modyo font-bold py-2 px-2 rounded flex flex-row items-center gap-2"
             onClick={resetGame}
             type="button">
-            <VscDebugRestart /> <span className="hidden md:show">Reiniciar</span>
+            <VscDebugRestart /> <span className="hidden md:block">Reiniciar</span>
+          </button>
+          <button
+            className="bg-green-500 text-white font-bold py-2 px-2 rounded flex flex-row items-center gap-2"
+            onClick={exitGame}
+            type="button">
+            <MdExitToApp /> <span className="hidden md:block">Salir</span>
           </button>
         </div>
       </div>
