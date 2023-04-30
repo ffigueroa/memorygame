@@ -35,6 +35,7 @@ export default function Home() {
 
   const initGame = () => {
     if (player?.name) {
+      setLoading(true);
       router.push('/game');
     }
   };
@@ -51,7 +52,7 @@ export default function Home() {
     if (player.name) {
       return (
         <div className="text-center">
-          <h2 className="text-3xl font-medium text-slate-600">
+          <h2 className="text-xl md:text-3xl font-medium text-slate-600">
             ¿<span className="font-black">{player.name}</span> estás listo para jugar?
           </h2>
           <p
@@ -76,10 +77,10 @@ export default function Home() {
 
   return (
     <main className={`flex text-gray-500 flex-col items-center pt-10 `}>
-      <h1 className="text-5xl font-bold text-slate-800">
+      <h1 className="text-3xl md:text-5xl font-bold text-slate-800">
         <span className="text-modyo font-medium">Memory</span>Game
       </h1>
-      <div className="flex h-48 justify-center items-center">{renderPlayerName()}</div>
+      <div className="flex h-36 justify-center items-center">{renderPlayerName()}</div>
       <button
         className={`h-12 w-60 font-medium text-lg text-white bg-gray-300  rounded-full  transition ease-in-out hover:scale-105 ${
           player?.name ? 'bg-modyo' : ''

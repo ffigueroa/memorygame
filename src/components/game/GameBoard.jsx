@@ -133,32 +133,32 @@ export default function GameBoard({ player, imagesData }) {
   );
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto px-2">
       <div className="flex flex-row items-center justify-between bg-slate-100 rounded-lg my-4 p-4">
         <div className="">
-          <h1 className="text-4xl font-bold text-slate-800">
+          <h1 className="text-xl md:text-4xl font-bold text-slate-800">
             <span className="text-modyo font-medium">Memory</span>Game
           </h1>
         </div>
 
-        <div className="text-center mt-6">
+        <div className="flex flex-row gap-2 items-center">
+          <div className="inline">
+            Jugando <span className="font-bold text-modyo">{player.name}</span> 😎
+          </div>
+        </div>
+
+        <div className="text-center">
           <button
             className="border border-green-500 text-modyo font-bold py-2 px-2 rounded flex flex-row items-center gap-2"
             onClick={resetGame}
             type="button">
-            <VscDebugRestart /> Reiniciar
+            <VscDebugRestart /> <span className="hidden md:show">Reiniciar</span>
           </button>
-        </div>
-
-        <div className="flex flex-row gap-2 items-center">
-          <div className="flex flex-col ">
-            <span className="font-bold text-modyo">{player.name}</span>
-          </div>
         </div>
       </div>
 
       {cards.length > 0 ? (
-        <div className="game-board relative bg-slate-100 rounded-lg py-10">
+        <div className="game-board relative bg-slate-100 rounded-lg py-10 px-2">
           <div className="absolute -top-3 -right-2 shadow-md bg-white rounded-lg p-2  flex flex-row gap-4">
             <p className="text-md text-slate-600 font-normal">
               Aciertos:{' '}
