@@ -9,9 +9,11 @@ module.exports = {
     extend: {
       backgroundColor: {
         modyo: '#3dc681',
+        bluemodyo: '#151f38',
       },
       textColor: {
         modyo: '#3dc681',
+        bluemodyo: '#151f38',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

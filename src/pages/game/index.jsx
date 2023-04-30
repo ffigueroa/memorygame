@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+
 import { usePlayer } from '../../contexts/PlayerContext';
 import GameAPI from '../../modules/game/infrastructure/GameAPI';
 import Loading from '../../components/Loading';

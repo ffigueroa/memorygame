@@ -1,18 +1,19 @@
 import Image from 'next/image';
-import { useState } from 'react';
 import styles from './Card.module.scss';
 
-export default function Card({ card }) {
-  const [isFlipped, setIsFlipped] = useState(true);
-
-  const handleClick = () => {
-    setIsFlipped(!isFlipped);
+export default function Card({ card, handleClick, isSelected, isMatched }) {
+  const onCardClick = () => {
+    if (!isSelected && !isMatched) {
+      handleClick(card);
+    }
   };
 
   return (
     <div
-      className={`${styles.card__container} ${isFlipped ? styles['card--is-flipped'] : ''}`}
-      onClick={handleClick}
+      className={`${styles.card__container} ${
+        isSelected || isMatched ? '' : styles['card--is-flipped']
+      }`}
+      onClick={onCardClick}
       aria-hidden="true">
       <div className={styles.card__inner}>
         <div className={`${styles.card__side} ${styles.card__front}`}>
@@ -28,7 +29,7 @@ export default function Card({ card }) {
         </div>
         <div className={`${styles.card__side} ${styles.card__back}`}>
           <div className="h-full w-full flex items-center justify-center p-4">
-            <p>?</p>
+            <Image src="/images/modyo_m.svg" width={40} height={40} alt="Modyo" />
           </div>
         </div>
       </div>

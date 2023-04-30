@@ -1,15 +1,11 @@
 import { useRouter } from 'next/router';
 
-// eslint-disable-next-line camelcase
-import { DM_Sans } from 'next/font/google';
 import { useEffect, useState } from 'react';
 
 import PlayerInput from '../components/game/PlayerInput';
 import { usePlayer } from '../contexts/PlayerContext';
 
 import Loading from '../components/Loading';
-
-const dm = DM_Sans({ subsets: ['latin'], weight: ['400', '500', '700'] });
 
 export default function Home() {
   const router = useRouter();
@@ -79,7 +75,7 @@ export default function Home() {
   };
 
   return (
-    <main className={`flex text-gray-500 flex-col items-center pt-10 ${dm.className}`}>
+    <main className={`flex text-gray-500 flex-col items-center pt-10 `}>
       <h1 className="text-5xl font-bold text-slate-800">
         <span className="text-modyo font-medium">Memory</span>Game
       </h1>
