@@ -1,0 +1,86 @@
+                    GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+Copyright (C) 2023 Fernando Figueroa
+
+Everyone is permitted to copy and distribute verbatim or modified
+copies of this license document, and changing it is allowed as long
+as the name is changed.
+
+            TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+0. Definitions.
+
+"License" shall mean the terms and conditions for use, reproduction,
+and distribution as defined by Sections 1 through 9 of this document.
+
+"Author" shall mean Fernando Figueroa.
+
+"Source" form shall mean the preferred form for making modifications,
+including but not limited to software source code, documentation
+source, and configuration files.
+
+"Object" form shall mean any form resulting from mechanical
+transformation or translation of a Source form, including but
+not limited to compiled object code, generated documentation,
+and conversions to other media types.
+
+"Work" shall mean the work of authorship, whether in Source or Object
+form, made available under the License, as indicated by a copyright
+notice that is included in or attached to the work.
+
+1. Source Code.
+
+The Work must include the Source Code under the terms of this License.
+You may not offer or impose any terms on any Source Code version that
+alters or restricts the applicable version of this License.
+
+2. Basic Permissions.
+
+All rights granted under this License are granted for the term of
+copyright on the Work, and are irrevocable once granted, provided
+the stated conditions are met. This License explicitly affirms your
+unlimited permission to run the unmodified Program. The output from
+running a covered work is covered by this License only if the output,
+given its content, constitutes a covered work. This License acknowledges
+your rights of fair use or other equivalent, as provided by copyright law.
+
+3. Distribution of Source Code Form.
+
+You may distribute the Source Code form of the Work, provided that
+you meet the following conditions:
+
+a) You must give any other recipients of the Work or Derivative Works
+a copy of this License; and
+
+b) You must cause any modified files to carry prominent notices stating
+that you changed the files; and
+
+c) You must retain, in the Source Code of any Derivative Works that You
+distribute, all copyright, patent, trademark, and attribution notices
+from the Source Code of the Work, as well as any notices of any changes
+that you made.
+
+4. Distribution of Object Form.
+
+You may distribute the Object form of the Work, provided that you
+meet the following conditions:
+
+a) You must give any other recipients of the Work or Derivative Works
+a copy of this License; and
+
+b) You must cause any modified files to carry prominent notices stating
+that you changed the files; and
+
+c) You must distribute the Object form of the Work under the terms of
+this License, in the form that is suitable for making modifications
+to it, as indicated in Section 2. You must include a copy of this
+License with every copy of the Work You distribute or You must
+indicate in a readable copy of the License that the Source Code is
+available under the terms of this License; and
+
+d) If the Work includes a "NOTICE" text file as part of its distribution,
+then any Derivative Works that You distribute must include a readable
+copy of the attribution notices contained within such NOTICE file,
+excluding those notices that do not pertain to any part of the
+Derivative Works, in at least one of the following places:
