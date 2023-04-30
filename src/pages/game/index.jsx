@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { usePlayer } from '../../contexts/PlayerContext';
-
+import GameAPI from '../../modules/game/infrastructure/GameAPI';
 import Loading from '../../components/Loading';
+import GameBoard from '../../components/game/GameBoard';
 
-export default function Game() {
+export default function Game({ imagesData }) {
   const router = useRouter();
   const { player } = usePlayer();
 
@@ -12,7 +13,7 @@ export default function Game() {
 
   useEffect(() => {
     setLoading(false);
-  }, []);
+  }, [imagesData]);
 
   if (loading) {
     return <Loading />;
@@ -24,20 +25,20 @@ export default function Game() {
     }, 5000);
     return (
       <p className="text-sm text-slate-800 text-center">
-        Para jugar necesitamos saber tu nombre, en 5 segundos serás redireccionado.
+        Para jugar necesitamos saber tu nombre, en 5 segundos serás redireccionado al inicio.
       </p>
     );
   }
 
-  return (
-    <div>
-      <div>
-        <span>{player.name}</span>
-      </div>
+  return <GameBoard player={player} imagesData={imagesData} />;
+}
 
-      <div>
-        <p>Testing</p>
-      </div>
-    </div>
-  );
+export async function getServerSideProps() {
+  const imagesData = await GameAPI.fetchImages();
+
+  return {
+    props: {
+      imagesData,
+    },
+  };
 }

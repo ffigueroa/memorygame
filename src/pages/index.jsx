@@ -4,8 +4,10 @@ import { useRouter } from 'next/router';
 import { DM_Sans } from 'next/font/google';
 import { useEffect, useState } from 'react';
 
-import PlayerInput from '../components/PlayerInput';
+import PlayerInput from '../components/game/PlayerInput';
 import { usePlayer } from '../contexts/PlayerContext';
+
+import Loading from '../components/Loading';
 
 const dm = DM_Sans({ subsets: ['latin'], weight: ['400', '500', '700'] });
 
@@ -36,18 +38,20 @@ export default function Home() {
   };
 
   const initGame = () => {
-    router.push('/game');
+    if (player?.name) {
+      router.push('/game');
+    }
   };
 
   useEffect(() => {
     setLoading(false);
   }, []);
 
-  const renderPlayerName = () => {
-    if (loading) {
-      return <p>Cargando</p>;
-    }
+  if (loading) {
+    return <Loading />;
+  }
 
+  const renderPlayerName = () => {
     if (player.name) {
       return (
         <div className="text-center">
@@ -79,12 +83,10 @@ export default function Home() {
       <h1 className="text-5xl font-bold text-slate-800">
         <span className="text-modyo font-medium">Memory</span>Game
       </h1>
-
       <div className="flex h-48 justify-center items-center">{renderPlayerName()}</div>
-
       <button
-        className={`h-12 w-60 font-medium text-lg text-white bg-gray-300  rounded-full ${
-          player.name ? 'bg-modyo' : ''
+        className={`h-12 w-60 font-medium text-lg text-white bg-gray-300  rounded-full  transition ease-in-out hover:scale-105 ${
+          player?.name ? 'bg-modyo' : ''
         }`}
         type="button"
         disabled={!player}
