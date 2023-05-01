@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
 import Menu from '../Menu/Menu';
+import PlayerInfo from '../PlayerInfo/PlayerInfo';
 import CardsGrid from '../CardsGrid/CardsGrid';
 import ScoreBoard from '../ScoreBoard/ScoreBoard';
 import Modal from '../Modal/Modal';
@@ -102,9 +103,10 @@ export default function GameBoard({ player, imagesData }) {
 
   return (
     <div className="max-w-4xl mx-auto px-2">
-      <Menu player={player} resetGame={resetGame} exitGame={exitGame} />
+      <Menu resetGame={resetGame} exitGame={exitGame} />
       {cards.length > 0 ? (
         <div className="game-board relative bg-slate-100 rounded-lg py-10 px-2">
+          <PlayerInfo player={player} />
           <ScoreBoard matchedCards={matchedCards.length} errors={errors} />
           <CardsGrid
             cards={cards}

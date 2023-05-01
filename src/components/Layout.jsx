@@ -1,8 +1,6 @@
 // eslint-disable-next-line camelcase
 import { DM_Sans } from 'next/font/google';
 import Head from 'next/head';
-
-import React from 'react';
 import Footer from './Footer/Footer';
 
 const dm = DM_Sans({ subsets: ['latin'], weight: ['400', '500', '700'] });

@@ -1,11 +1,11 @@
 function ScoreBoard({ matchedCards, errors }) {
   return (
-    <div className="absolute -top-3 -right-2 shadow-md bg-white rounded-lg p-2  flex flex-row gap-4">
-      <p className="text-md text-slate-600 font-normal">
+    <div className="absolute bg-white text-slate-400 -top-3 right-0 md:-right-2 shadow-md bg-modyo-green rounded-lg px-2 py-1  flex flex-row gap-2 items-center ">
+      <p className="flex gap-1 text-sm  font-normal items-center">
         Aciertos: <span className="text-xl text-modyo-green font-bold">{matchedCards / 2}</span>
       </p>
-
-      <p className="text-md text-slate-600 font-normal">
+      |
+      <p className="flex gap-1 text-sm  font-normal items-center">
         Errores: <span className="text-xl text-red-400 font-bold">{errors}</span>
       </p>
     </div>
