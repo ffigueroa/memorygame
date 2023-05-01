@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 
 import { usePlayer } from '../../contexts/PlayerContext';
 import GameAPI from '../../modules/game/infrastructure/GameAPI';
-import Loading from '../../components/Loading';
-import GameBoard from '../../components/game/GameBoard';
+import Loading from '../../components/Loading/Loading';
+import GameBoard from '../../components/GameBoard/GameBoard';
 
 export default function Game({ imagesData }) {
   const router = useRouter();

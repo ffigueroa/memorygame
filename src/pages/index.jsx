@@ -2,10 +2,10 @@ import { useRouter } from 'next/router';
 
 import { useEffect, useState } from 'react';
 
-import PlayerInput from '../components/game/PlayerInput';
+import PlayerInput from '../components/PlayerInput/PlayerInput';
 import { usePlayer } from '../contexts/PlayerContext';
 
-import Loading from '../components/Loading';
+import Loading from '../components/Loading/Loading';
 
 export default function Home() {
   const router = useRouter();
@@ -78,12 +78,12 @@ export default function Home() {
   return (
     <main className={`flex text-gray-500 flex-col items-center pt-10 `}>
       <h1 className="text-3xl md:text-5xl font-bold text-slate-800">
-        <span className="text-modyo font-medium">Memory</span>Game
+        <span className="text-modyo-green font-medium">Memory</span>Game
       </h1>
       <div className="flex h-36 justify-center items-center">{renderPlayerName()}</div>
       <button
         className={`h-12 w-60 font-medium text-lg text-white bg-gray-300  rounded-full  transition ease-in-out hover:scale-105 ${
-          player?.name ? 'bg-modyo' : ''
+          player?.name ? 'bg-modyo-green' : ''
         }`}
         type="button"
         disabled={!player}

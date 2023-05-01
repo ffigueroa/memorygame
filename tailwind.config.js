@@ -8,16 +8,22 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        modyo: '#3dc681',
-        bluemodyo: '#151f38',
+        modyo: {
+          green: '#3dc681',
+          blue: '#151f38',
+        },
       },
       textColor: {
-        modyo: '#3dc681',
-        bluemodyo: '#151f38',
+        modyo: {
+          green: '#3dc681',
+          blue: '#151f38',
+        },
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      borderColor: {
+        modyo: {
+          green: '#3dc681',
+          blue: '#151f38',
+        },
       },
     },
   },

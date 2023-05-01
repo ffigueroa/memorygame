@@ -1,0 +1,15 @@
+.input {
+  @apply bg-gray-100 rounded w-60 h-10 px-2 focus:outline-none focus:ring-2 focus:ring-green-500;
+}
+
+.submitButton {
+  @apply flex bg-gray-300 w-10 h-10 rounded items-center justify-center;
+}
+
+.submitButtonActive {
+  @apply bg-modyo-green;
+}
+
+.icon {
+  @apply fill-white;
+}

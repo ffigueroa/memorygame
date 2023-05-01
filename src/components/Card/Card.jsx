@@ -17,18 +17,17 @@ export default function Card({ card, handleClick, isSelected, isMatched }) {
       aria-hidden="true">
       <div className={styles.card__inner}>
         <div className={`${styles.card__side} ${styles.card__front}`}>
-          <div className="h-full w-full">
+          <div className={`${styles.card__image}`}>
             <Image
               src={card.image}
               alt={card.title}
               className="object-cover h-full w-full rounded-md"
-              layout="fill"
-              objectFit="cover"
+              fill
             />
           </div>
         </div>
         <div className={`${styles.card__side} ${styles.card__back}`}>
-          <div className="h-full w-full flex items-center justify-center p-4">
+          <div className={`${styles.card__image} ${styles.card__brand}`}>
             <Image src="/images/modyo_m.svg" width={40} height={40} alt="Modyo" />
           </div>
         </div>
