@@ -7,9 +7,23 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      backgroundColor: {
+        modyo: {
+          green: '#3dc681',
+          blue: '#151f38',
+        },
+      },
+      textColor: {
+        modyo: {
+          green: '#3dc681',
+          blue: '#151f38',
+        },
+      },
+      borderColor: {
+        modyo: {
+          green: '#3dc681',
+          blue: '#151f38',
+        },
       },
     },
   },

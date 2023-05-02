@@ -1,0 +1,15 @@
+.footer {
+  @apply flex flex-col items-center justify-center flex-1 py-4 mt-4;
+}
+
+.text {
+  @apply transition ease-in-out duration-300 text-slate-300 text-xs;
+
+  &:hover {
+    @apply text-slate-500;
+  }
+}
+
+.bold {
+  @apply font-bold;
+}

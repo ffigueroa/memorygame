@@ -1,0 +1,44 @@
+.card {
+  &__container {
+    @apply w-full h-28 md:h-36 max-w-[7rem] mx-auto cursor-pointer transform transition-all duration-300 ease-in-out text-white text-4xl font-semibold;
+    perspective: 1000px;
+
+    &:hover {
+      @apply scale-110;
+    }
+  }
+
+  &__inner {
+    @apply w-full h-full relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__side {
+    @apply w-full h-full absolute border-solid rounded-md shadow-md;
+    backface-visibility: hidden;
+  }
+
+  &__front {
+    @apply bg-white;
+  }
+
+  &__back {
+    @apply bg-modyo-blue;
+    transform: rotateY(180deg);
+  }
+
+  &__image {
+    @apply h-full w-full;
+  }
+
+  &__brand {
+    @apply flex items-center justify-center p-4;
+  }
+
+  &--is-flipped {
+    .card__inner {
+      transform: rotateY(180deg);
+    }
+  }
+}

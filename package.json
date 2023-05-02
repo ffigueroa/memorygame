@@ -9,16 +9,22 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "prepare": "husky install",
-    "cm": "cz"
+    "cm": "cz",
+    "test": "jest --watch"
   },
   "dependencies": {
-    "autoprefixer": "10.4.14",
+    "jest-environment-jsdom": "^29.5.0",
     "next": "13.3.1",
     "postcss": "8.4.23",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "autoprefixer": "^10.4.14",
     "cz-emoji-conventional": "^1.0.1",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -27,8 +33,10 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
+    "jest": "^29.5.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
+    "sass": "^1.62.1",
     "tailwindcss": "3.3.2"
   },
   "config": {
