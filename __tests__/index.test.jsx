@@ -1,9 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/extend-expect';
 import { useRouter } from 'next/router';
-import { PlayerProvider } from '../contexts/PlayerContext';
-import Home from './index';
+import { PlayerProvider } from '../src/contexts/PlayerContext';
+import Home from '../src/pages/index';
 
 jest.mock('next/router', () => ({
   useRouter: jest.fn(),
