@@ -14,7 +14,8 @@ export default function Card({ card, handleClick, isSelected, isMatched }) {
         isSelected || isMatched ? '' : styles['card--is-flipped']
       }`}
       onClick={onCardClick}
-      aria-hidden="true">
+      aria-hidden="true"
+      data-testid="card">
       <div className={styles.card__inner}>
         <div className={`${styles.card__side} ${styles.card__front}`}>
           <div className={`${styles.card__image}`}>

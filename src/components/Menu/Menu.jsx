@@ -1,31 +1,29 @@
 import { VscDebugRestart } from 'react-icons/vsc';
 import { MdExitToApp } from 'react-icons/md';
+import styles from './Menu.module.scss';
 
-function Menu({ resetGame, exitGame }) {
+export default function Menu({ resetGame, exitGame }) {
   return (
-    <div className="flex flex-row items-center justify-between bg-slate-100 rounded-lg my-2 py-4 px-4">
-      <div className="">
-        <h1 className="text-2xl md:text-3xl font-bold text-slate-800">
-          <span className="text-modyo-green font-medium">Memory</span>Game
-        </h1>
-      </div>
-
+    <div className={styles.menu}>
+      <h1>
+        <span className={styles.menu__title}>Memory</span>Game
+      </h1>
       <div className="flex flex-row gap-2">
         <button
-          className=" bg-modyo-green text-white font-bold py-2 px-2 rounded flex flex-row items-center gap-2"
+          className={`${styles.menu__button} ${styles['menu__button--primary']}`}
           onClick={resetGame}
           type="button">
-          <VscDebugRestart /> <span className="hidden md:block">Reiniciar</span>
+          <VscDebugRestart />
+          <span className="hidden md:block">Reiniciar</span>
         </button>
         <button
-          className="border border-modyo-green text-modyo-green font-bold py-2 px-2 rounded flex flex-row items-center gap-2"
+          className={`${styles.menu__button} ${styles['menu__button--secondary']}`}
           onClick={exitGame}
           type="button">
-          <MdExitToApp /> <span className="hidden md:block">Salir</span>
+          <MdExitToApp />
+          <span className="hidden md:block">Salir</span>
         </button>
       </div>
     </div>
   );
 }
-
-export default Menu;

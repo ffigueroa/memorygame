@@ -1,4 +1,3 @@
-import React from 'react';
 import { BsCheckLg } from 'react-icons/bs';
 import styles from './PlayerInput.module.scss';
 
@@ -6,7 +5,7 @@ function PlayerInput(props) {
   const { inputValue, handleChange, handleSubmit } = props;
 
   return (
-    <form className="gap-6" onSubmit={handleSubmit}>
+    <form className="gap-6" onSubmit={handleSubmit} data-testid="form">
       <label htmlFor="name" className="flex flex-col items-center gap-2">
         Ingresa nombre del jugador
         <div className="flex flex-row gap-2">
@@ -17,10 +16,13 @@ function PlayerInput(props) {
             placeholder="Ej: Karina"
             value={inputValue}
             onChange={handleChange}
+            data-testid="inputName"
           />
           <button
             className={`${styles.submitButton} ${inputValue ? styles.submitButtonActive : ''}`}
-            type="submit">
+            disabled={!inputValue}
+            type="submit"
+            data-testid="confirmButton">
             <BsCheckLg className={styles.icon} size={20} />{' '}
           </button>
         </div>

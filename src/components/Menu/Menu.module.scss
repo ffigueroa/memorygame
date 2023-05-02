@@ -1,0 +1,24 @@
+.menu {
+  @apply flex flex-row items-center justify-between bg-slate-100 rounded-lg my-2 py-4 px-4;
+
+  h1 {
+    @apply text-2xl md:text-3xl font-bold text-slate-800;
+  }
+
+  .menu__title {
+    @apply text-modyo-green font-medium;
+  }
+
+  .menu__button {
+    @apply font-bold py-2 px-2 rounded flex flex-row items-center gap-2;
+  }
+
+  .menu__button--primary {
+    @apply bg-modyo-green text-white;
+    border: none;
+  }
+
+  .menu__button--secondary {
+    @apply border border-modyo-green text-modyo-green;
+  }
+}
