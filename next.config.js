@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cloud.modyocdn.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.modyo.cloud',
+      }
     ],
   },
 }
