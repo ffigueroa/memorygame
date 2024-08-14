@@ -39,7 +39,7 @@ export default function Layout({ children }) {
 
       <div className={`${dm.className} subpixel-antialiased`}>{children}</div>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
