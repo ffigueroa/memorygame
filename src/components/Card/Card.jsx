@@ -29,7 +29,7 @@ export default function Card({ card, handleClick, isSelected, isMatched }) {
         </div>
         <div className={`${styles.card__side} ${styles.card__back}`}>
           <div className={`${styles.card__image} ${styles.card__brand}`}>
-            <Image src="/images/modyo_m.svg" width={40} height={40} alt="Modyo" />
+            <Image src="/images/uno_m.svg" width={60} height={60} alt="UNO" />
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ describe('Card', () => {
   });
 
   test('renders the brand logo', () => {
-    const brandLogo = screen.getByAltText('Modyo');
+    const brandLogo = screen.getByAltText('UNO');
     expect(brandLogo).toBeInTheDocument();
   });
 });

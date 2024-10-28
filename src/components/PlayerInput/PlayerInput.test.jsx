@@ -5,7 +5,7 @@ import PlayerInput from './PlayerInput';
 
 describe('PlayerInput', () => {
   test('should render with correct props', () => {
-    const inputValue = 'Karina';
+    const inputValue = 'Feña';
     const handleChange = jest.fn();
     const handleSubmit = jest.fn();
 
@@ -17,7 +17,7 @@ describe('PlayerInput', () => {
       />
     );
 
-    const inputElement = screen.getByPlaceholderText(/ej: karina/i);
+    const inputElement = screen.getByPlaceholderText(/ej: Feña/i);
     const submitButton = screen.getByRole('button');
 
     expect(inputElement).toHaveValue(inputValue);
@@ -25,7 +25,7 @@ describe('PlayerInput', () => {
   });
 
   test('should call handleChange on input change', () => {
-    const inputValue = 'Karina';
+    const inputValue = 'Feña';
     const handleChange = jest.fn();
     const handleSubmit = jest.fn();
 
@@ -37,14 +37,14 @@ describe('PlayerInput', () => {
       />
     );
 
-    const inputElement = screen.getByPlaceholderText(/ej: karina/i);
+    const inputElement = screen.getByPlaceholderText(/ej: Feña/i);
     fireEvent.change(inputElement, { target: { value: 'John Doe' } });
 
     expect(handleChange).toHaveBeenCalled();
   });
 
   test('should call handleSubmit on form submission', () => {
-    const inputValue = 'Karina';
+    const inputValue = 'Feña';
     const handleChange = jest.fn();
     const handleSubmit = jest.fn();
 

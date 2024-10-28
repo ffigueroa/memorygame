@@ -13,7 +13,7 @@ function PlayerInput(props) {
             id="name"
             type="text"
             className={styles.input}
-            placeholder="Ej: Karina"
+            placeholder="Ej: Feña"
             value={inputValue}
             onChange={handleChange}
             data-testid="inputName"
